@@ -1,0 +1,321 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/* line 1, ../scss/common/_variables.scss */
+.carousel, #amaro-carousel header.page-title, #amaro-carousel section.page-carousel, #amaro-carousel footer.page-credits, #amaro-carousel footer.page-credits .credits {
+  width: 100%;
+  position: relative;
+  float: left;
+  padding: 0;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* line 3, ../scss/common/_variables.scss */
+.carousel .box-arrow, .carousel .bullets .bullet {
+  cursor: pointer;
+}
+
+/* line 5, ../scss/common/_variables.scss */
+.carousel .box-arrow .arrow, .carousel .bullets .bullet, .carousel .image-box {
+  display: inline-block;
+}
+
+/* line 6, ../scss/common/_variables.scss */
+.carousel .image-box .carousel-img {
+  display: block;
+}
+
+/* line 7, ../scss/common/_variables.scss */
+#amaro-carousel footer.page-credits .credits .credit {
+  display: table;
+}
+
+/* line 9, ../scss/common/_variables.scss */
+#amaro-carousel header.page-title, #amaro-carousel footer.page-credits .credits .credit {
+  text-align: center;
+}
+
+/* line 10, ../scss/common/_variables.scss */
+#amaro-carousel footer.page-credits .credits .credit a {
+  font-weight: bold;
+}
+
+/* line 12, ../scss/common/_variables.scss */
+.carousel .box-arrow, .carousel .box-arrow img, .carousel .box-arrow .in-ball, .carousel .bullets, .carousel .image-box .title, .carousel .image-box .desc {
+  position: absolute;
+}
+
+/* line 1, ../scss/_carousel.scss */
+.carousel {
+  white-space: nowrap;
+  overflow: hidden;
+  height: 300px;
+}
+/* line 8, ../scss/_carousel.scss */
+.carousel:hover .bullets .bullet {
+  opacity: 1;
+  filter: alpha(opacity=10);
+}
+/* line 13, ../scss/_carousel.scss */
+.carousel .box-arrow {
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  top: 50%;
+  z-index: 5;
+  text-align: center;
+}
+/* line 25, ../scss/_carousel.scss */
+.carousel .box-arrow .arrow {
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+/* line 30, ../scss/_carousel.scss */
+.carousel .box-arrow.left {
+  left: 0;
+  margin-left: 25px;
+}
+/* line 33, ../scss/_carousel.scss */
+.carousel .box-arrow.left .arrow {
+  margin-top: 4px;
+  margin-left: -5px;
+  border-right: 15px solid #FFFFFF;
+}
+/* line 39, ../scss/_carousel.scss */
+.carousel .box-arrow.right {
+  right: 0;
+  margin-right: 25px;
+}
+/* line 42, ../scss/_carousel.scss */
+.carousel .box-arrow.right .arrow {
+  margin-top: 4px;
+  margin-right: -5px;
+  border-left: 15px solid #FFFFFF;
+}
+/* line 48, ../scss/_carousel.scss */
+.carousel .box-arrow img {
+  margin: 0 auto;
+  z-index: 5;
+}
+/* line 53, ../scss/_carousel.scss */
+.carousel .box-arrow .in-ball {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 2px 2px #FFFFFF;
+  -moz-box-shadow: 0px 0px 2px 2px #FFFFFF;
+  box-shadow: 0px 0px 2px 2px #FFFFFF;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.1;
+  filter: alpha(opacity=1);
+  background-color: #FFFFFF;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+}
+/* line 65, ../scss/_carousel.scss */
+.carousel .bullets {
+  z-index: 10;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+/* line 72, ../scss/_carousel.scss */
+.carousel .bullets .bullet {
+  -webkit-box-shadow: 0px 0px 1px 1px #303030;
+  -moz-box-shadow: 0px 0px 1px 1px #303030;
+  box-shadow: 0px 0px 1px 1px #303030;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0.5;
+  filter: alpha(opacity=5);
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+  border: 2px solid #303030;
+  background-color: #AFAFAF;
+}
+/* line 84, ../scss/_carousel.scss */
+.carousel .bullets .bullet.on {
+  border: 2px solid #FFFFFF;
+}
+/* line 89, ../scss/_carousel.scss */
+.carousel .image-box {
+  position: relative;
+  width: 80%;
+  height: 300px;
+  margin-left: -5px;
+}
+/* line 95, ../scss/_carousel.scss */
+.carousel .image-box .title {
+  -webkit-border-radius: 0px 5px 5px;
+  -moz-border-radius: 0px 5px 5px;
+  border-radius: 0px 5px 5px;
+  opacity: 0.5;
+  filter: alpha(opacity=5);
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  white-space: normal;
+  font-size: 1.125rem;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  text-align: center;
+  z-index: 5;
+  top: 0;
+  margin: 10px;
+  padding: 10px 5px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px #333333;
+}
+/* line 117, ../scss/_carousel.scss */
+.carousel .image-box .desc {
+  -webkit-border-radius: 5px 5px 0px 5px;
+  -moz-border-radius: 5px 5px 0px 5px;
+  border-radius: 5px 5px 0px 5px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  white-space: normal;
+  font-size: 1rem;
+  max-width: 200px;
+  max-height: 200px;
+  text-align: center;
+  z-index: 5;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  padding: 10px 5px;
+  color: #000000;
+  background-color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+/* line 136, ../scss/_carousel.scss */
+.carousel .image-box .carousel-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 300px;
+}
+/* line 147, ../scss/_carousel.scss */
+.carousel .image-box:hover .title, .carousel .image-box:hover .desc {
+  opacity: 1;
+  filter: alpha(opacity=10);
+}
+/* line 151, ../scss/_carousel.scss */
+.carousel .image-box:first-child {
+  margin-left: 10%;
+  -webkit-transition: margin-left 2s;
+  -moz-transition: margin-left 2s;
+  -ms-transition: margin-left 2s;
+  -o-transition: margin-left 2s;
+  transition: margin-left 2s;
+}
+
+/* line 1, ../scss/_page.scss */
+#amaro-carousel {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+/* line 9, ../scss/_page.scss */
+#amaro-carousel header.page-title {
+  width: 100%;
+}
+/* line 13, ../scss/_page.scss */
+#amaro-carousel header.page-title h1.title {
+  font-size: 2.0rem;
+  color: #30303F;
+}
+/* line 20, ../scss/_page.scss */
+#amaro-carousel section.page-carousel {
+  padding: 100px 0px;
+}
+/* line 26, ../scss/_page.scss */
+#amaro-carousel footer.page-credits {
+  padding: 10px 10px 40px;
+  font-size: 0.8rem;
+}
+/* line 32, ../scss/_page.scss */
+#amaro-carousel footer.page-credits .credits .credit {
+  width: 100% !important;
+}

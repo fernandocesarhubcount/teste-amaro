@@ -1,0 +1,25 @@
+@mixin transition($value){
+  -webkit-transition: $value;
+  -moz-transition:    $value;
+  -ms-transition:     $value;
+  -o-transition:      $value;
+  transition:         $value;
+}
+
+@mixin opacity($value){
+  opacity:   $value;
+  $ie-value: $value*10;
+  filter: alpha(opacity=$ie-value);
+}
+
+@mixin box-shadow($value){
+  -webkit-box-shadow: $value;
+  -moz-box-shadow:    $value;
+  box-shadow:         $value;
+}
+
+@mixin border-radius($value){
+  -webkit-border-radius: $value;
+  -moz-border-radius:    $value;
+  border-radius:         $value;
+}

@@ -1,0 +1,10 @@
+{
+  "name": "amaro-slide-test",
+  "license": "MIT",
+  "ignore": [
+    "package.json"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}
